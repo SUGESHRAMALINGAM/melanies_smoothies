@@ -1,5 +1,5 @@
-1 # requirements.txt
+# requirements.txt
 
-2 snowflake-snowpark-python
+snowflake-snowpark-python
 
-3 streamlit
+streamlit

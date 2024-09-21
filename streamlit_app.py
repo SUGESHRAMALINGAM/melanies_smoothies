@@ -37,6 +37,6 @@ if ingredients_list:
 if len(ingredients_list) > 5:
     st.warning("You can only select up to 5 options. Remove an option first.")
 
-fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
+fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon") #st.text(fruityvice_response.json())
 
-st.text(fruityvice_response.json())
+fv_df = st.dataframe (data=fruityvice_response.json(), use_container_width=True)

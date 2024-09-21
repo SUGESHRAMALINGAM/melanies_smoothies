@@ -1,6 +1,7 @@
 # Import python packages
 import streamlit as st
 from snowflake.snowpark.functions import col
+import requests
 
 # Write directly to the app
 st.title("Custamize Your Smoothie :balloon:")
@@ -36,4 +37,6 @@ if ingredients_list:
 if len(ingredients_list) > 5:
     st.warning("You can only select up to 5 options. Remove an option first.")
 
+fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
 
+st.text(fruityvice_response.json())
